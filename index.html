@@ -21,7 +21,10 @@
   <p>We buy used phones, laptops, and tablets.</p>
 
   <!-- Formspree Form -->
-  <form id="sellForm">
+  <form action="https://formspree.io/f/mgvljlwp" method="POST">
+    <!-- Absolute URL for redirect -->
+    <input type="hidden" name="_next" value="https://techbuyinc.github.io/sell-your-electronics/thank-you.html">
+
     <label>Name:</label>
     <input type="text" name="name" required>
 
@@ -33,31 +36,5 @@
 
     <button type="submit">Submit</button>
   </form>
-
-  <script>
-    const form = document.getElementById('sellForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault(); // prevent default page reload
-      const data = new FormData(form);
-
-      fetch('https://formspree.io/f/mgvljlwp', { // replace with your Formspree ID
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          window.location.href = 'thank-you.html'; // redirect to your local thank-you page
-        } else {
-          alert('There was a problem with your submission.');
-        }
-      })
-      .catch(error => {
-        alert('There was a problem submitting the form.');
-        console.error(error);
-      });
-    });
-  </script>
 </body>
 </html>
-

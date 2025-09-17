@@ -6,28 +6,34 @@
   <title>Sell Your Electronics</title>
   <style>
     body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f9f9f9; }
+    img { max-width: 200px; margin-bottom: 20px; }
     h1 { color: #2563eb; }
-    p { font-size: 18px; }
+    form { margin-top: 30px; display: inline-block; text-align: left; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input { width: 300px; padding: 8px; margin-top: 5px; }
+    button { margin-top: 15px; padding: 10px 20px; background: #2563eb; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1e40af; }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Company Logo" style="max-width:200px; margin-bottom:20px;">
-  <h1>Welcome to Sell Your Electronics</h1>
+  <img src="logo.png" alt="Company Logo">
+  <h1>Sell Your Electronics</h1>
   <p>We buy used phones, laptops, and tablets.</p>
-  <h2>Submit Your Device</h2>
-<form action="https://formspree.io/f/mgvljlwp" method="POST">
-<input type="hidden" name="_next" value="thank-you.html">
 
-  <label>Name:</label><br>
-  <input type="text" name="name" required><br><br>
+  <!-- Formspree Form -->
+  <form action="https://formspree.io/f/mgvljlwp" method="POST">
+    <input type="hidden" name="_next" value="thank-you.html">
 
-  <label>Email:</label><br>
-  <input type="email" name="email" required><br><br>
+    <label>Name:</label>
+    <input type="text" name="name" required>
 
-  <label>Device:</label><br>
-  <input type="text" name="device" required><br><br>
+    <label>Email:</label>
+    <input type="email" name="email" required>
 
-  <button type="submit">Submit</button>
-</form>
+    <label>Device:</label>
+    <input type="text" name="device" required>
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>

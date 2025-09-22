@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sell Your Electronics</title>
+  <title>Contact - Sell Your Electronics</title>
   <link rel="stylesheet" href="style.css">
   </head>
 <body>
@@ -16,25 +16,21 @@
     </ul>
   </nav>
 
-  <!-- Logo -->
-  <img src="logo.png" alt="Company Logo">
+  <h1>Contact Us</h1>
+  <p>Have a question? Reach out using the form below!</p>
 
-  <!-- Heading & Intro -->
-  <h1>Sell Your Electronics</h1>
-  <p>We buy used phones, laptops, and tablets at the best prices. Fill out the form below and we'll get back to you quickly!</p>
-
-  <!-- Formspree Form -->
+  <!-- Contact Form (Formspree) -->
   <form action="https://formspree.io/f/mgvljlwp" method="POST">
-    <label>Name:</label>
+    <label>Your Name:</label>
     <input type="text" name="name" required>
 
-    <label>Email:</label>
+    <label>Your Email:</label>
     <input type="email" name="email" required>
 
-    <label>Device:</label>
-    <input type="text" name="device" required>
+    <label>Message:</label>
+    <textarea name="message" required></textarea>
 
-    <button type="submit">Submit</button>
+    <button type="submit">Send</button>
   </form>
 </body>
 </html>
